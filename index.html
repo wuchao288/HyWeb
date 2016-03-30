@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+   
+   <title></title>
+<style>
+	.row {
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-moz-flex;
+	display:-ms-flexbox;
+	display:flex;
+	width:100%;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box
+}
+.col {
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	-moz-box-flex:1;
+	-moz-flex:1;
+	-ms-flex:1;
+	flex:1;
+	display:block;
+	width:100%;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box
+}
+.col-33,.col-34 {
+	-webkit-box-flex:0;
+	-webkit-flex:0 0 33.3333%;
+	-moz-box-flex:0;
+	-moz-flex:0 0 33.3333%;
+	-ms-flex:0 0 33.3333%;
+	flex:0 0 33.3333%;
+	max-width:33.3333%
+}
+.col-30 {
+	-webkit-box-flex:0;
+	-webkit-flex:0 0 30%;
+	-moz-box-flex:0;
+	-moz-flex:0 0 30%;
+	-ms-flex:0 0 30%;
+	flex:0 0 30%;
+	max-width:30%;
+}
+.col-40 {
+	-webkit-box-flex:0;
+	-webkit-flex:0 0 40%;
+	-moz-box-flex:0;
+	-moz-flex:0 0 40%;
+	-ms-flex:0 0 40%;
+	flex:0 0 40%;
+	max-width:40%;
+}
+.nav-entry {
+	padding:5px;
+	font-size:15px
+}
+.nav-entry .row {
+	margin-bottom:5px;
+	height:6em
+}
+.nav-entry .row:last-of-type {
+	margin-bottom:0
+}
+.nav-entry .col {
+	border-left:1px solid #fff;
+	border-bottom:1px solid #fff;
+	height:100%
+}
+.nav-entry .col a {
+	height:50%
+}
+.nav-entry .row:nth-child(3) .col a {
+	background-color:#ff697a;
+	line-height: 3em;	
+	border-radius: 5px;
+	background-image: none !important;
+	font-weight: bold;
+}
+.nav-entry .row:nth-child(1) .col a {
+	background-color:#3d98ff;
+	font-weight: bold;
+}
+.nav-entry .row:nth-child(2) .col a {
+	background-color:#44c522;
+	font-weight: bold;
+}
+.nav-entry .row:nth-child(4) .col a {
+	background-color:#fc9720;
+	font-weight: bold;
+}
+.nav-entry .row:nth-child(3) .col {
+	width: 100%;
+	border-radius: 5px;
+	background-color:#ff697a;
+	text-align: center;
+	height: 3em;
+	background-image: none !important;
+}
+.nav-entry .row:nth-child(3) {
+	height: 3em;
+}
+/*.nav-entry .row:nth-child(3) .col span{
+	font-size: 1em;
+	font-weight: 400;
+	vertical-align:middle;
+	display:block;
+	position:absolute;
+	top:50%;
+	left:50%;
+}*/
+.nav-entry .row:nth-child(1) .col:first-of-type a,.nav-entry .row:nth-child(2) .col:first-of-type a,.nav-entry .row:nth-child(3) .col:first-of-type a {
+	height:100%
+}
+.nav-entry .col a+a {
+	border-top:1px solid #fff
+}
+.nav-entry .col:first-of-type a {
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px
+}
+.nav-entry .col:last-of-type a:nth-child(1) {
+	border-top-right-radius:5px
+}
+.nav-entry .col:last-of-type a:nth-child(2) {
+	border-bottom-right-radius:5px
+}
+.nav-entry .row:nth-child(4) .col:first-of-type a:nth-child(1) {
+	border-bottom-left-radius:0
+}
+.nav-entry .row:nth-child(4) .col:first-of-type a:nth-child(2) {
+	border-top-left-radius:0
+}
+.nav-entry .col>a {
+	position:relative;
+	display:block;
+	font-size:1em;
+	color:#fff;
+	text-shadow:0 2px 1px rgba(0,0,0,.2);
+	text-align:center;
+	line-height:3em;
+	box-sizing:border-box;
+	overflow:hidden
+}
+.nav-entry .col>a em {
+	font-style:normal;
+	display:block;
+	position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+	white-space:nowrap
+}
+.nav-entry .row:nth-child(1) 
+.col:first-of-type a:after,
+.nav-entry .row:nth-child(2) .col:first-of-type a:after,
+.nav-entry .row:nth-child(3) .col:first-of-type a:after,
+.nav-entry .wallet,.nav-entry .ico_shadow {
+	position:absolute;
+	bottom:10px;
+	left:50%;
+	content:"";
+	
+	-webkit-background-size:104px 326px;
+	background-size:104px 326px
+}
+.nav-entry li .ico_shadow {
+	bottom:-12px;
+	left:0;
+	width:104px;
+	height:82px;
+	background-position:0 -30px
+}
+.nav-entry .row:nth-child(1) .col:first-of-type a:after {
+	width:40px;
+	height:33px;
+	margin-left:-20px;
+	background-position:0 -130px
+}
+.nav-entry .row:nth-child(2) .col:first-of-type a:after {
+	bottom:15px;
+	width:43px;
+	height:28px;
+	margin-left:-23px;
+	background-position:-50px -120px
+}
+.nav-entry .row:nth-child(3) .col:first-of-type a:after {
+	width:35px;
+	height:43px;
+	margin-left:-18px;
+	background-position:0 -180px
+}
+.nav-entry .wallet {
+	bottom:0;
+	left:0;
+	width:104px;
+	height:16px;
+	text-align:center;
+	line-height:1.2;
+	font-style:normal;
+	font-size:9px;
+	color:#FF5F08;
+	z-index:3;
+	background:url(//pic.c-ctrip.com/h5/home/tag_summer.png) 0 0 no-repeat;
+	-webkit-background-size:104px 17px;
+	background-size:104px 17px
+}
+footer {
+	margin: 10px;
+}
+footer div{
+	text-align: center;
+	font-size: 11px;
+}
+</style>
+</head>
+<body>
+	<header>
+		<img src="img/a_01.png" width="100%"/>
+	</header>
+	<nav id="nav" class="nav-entry">
+		<div class="row">
+			<div class="col col-40">
+				<a id="c_hotel" title="短线出境" onclick="to('/webapp/hotel/');" data-href="/webapp/hotel/">
+				短线出境</a>
+				
+			</div>
+			<div class="col col-30">
+				<a id="c_hotel_international" title="泰国" onclick="to('/webapp/hotel/oversea/?otype=1');" data-href="/webapp/hotel/oversea/?otype=1">泰国</a>
+				<a id="c_hotel_sale" title="日本" onclick="to('/webapp/hotel/salehotellist?from=%2F%2Fm.ctrip.com');" data-href="/webapp/hotel/salehotellist?from=%2F%2Fm.ctrip.com">日本</a>
+			</div>
+		    <div class="col col-30">
+		    	<a id="c_group" title="韩国" onclick="to('/webapp/tuan/');" data-href="/webapp/tuan/">韩国</a>
+		    	<a id="c_hotel_inn" title="台湾" onclick="to('/webapp/inn/index');" data-href="/webapp/inn/index">台湾</a>
+		    </div>
+		</div>
+		<!--<span class="point">·</span>-->
+		<div class="row">
+			<div class="col col-40">
+				<a id="c_flight" title="出境长线" onclick="to('/html5/flight/matrix.html');" data-href="/html5/flight/matrix.html">出境长线</a>
+			</div>
+			<div class="col col-30">
+				<a id="c_train_ticket" title="美国" onclick="to('/webapp/train/');" data-href="/webapp/train/">美国</a>
+				<a id="c_flight_international" title="澳洲" onclick="to('/html5/Flight/international/');" data-href="/html5/Flight/international/">澳洲</a>
+			</div>
+			<div class="col col-30">
+				<a id="c_bus_ticket" title="欧洲" onclick="to('/webapp/bus/');" data-href="/webapp/bus/">欧洲</a>
+				<a id="c_car" class="js_car" title="海岛" onclick="to('/webapp/car/');" data-href="/webapp/car/">海岛</a>
+			</div>
+		</div>
+	    <div class="row">
+            <div class="col">
+            	 <a>湖南海外旅游-直航包机专家</a>
+            </div>
+		    
+		</div>	
+		
+		<!--<div class="row">
+			<div class="col col-33"><a id="c_ticket" title="景点·玩乐" onclick="to('/webapp/ticket/index');" data-href="/webapp/ticket/index">景点<span class="point">·</span>玩乐</a><a id="c_trip_finance" title="礼品卡" onclick="to('/webapp/lipin/#money');" data-href="/webapp/lipin/#money">礼品卡</a></div>
+			<div class="col col-33"><a id="c_food" title="美食" onclick="to('/webapp/you/foods/address.html?new=1');" data-href="/webapp/you/foods/address.html?new=1">美 食</a><a id="c_wifi" title="出境WiFi" onclick="to('/webapp/activity/wifi?from=ctrip_home');" data-href="/webapp/activity/wifi?from=ctrip_home">出境WiFi</a></div>
+			<div class="col col-33"><a id="c_global_shopping" title="全球购" onclick="to('/webapp/shopping/index');" data-href="/webapp/shopping/index">全球购</a><a id="c_more" title="更多" onclick="to('/webapp/more');" data-href="/webapp/more">更 多</a></div>
+		</div>-->
+	</nav>
+	
+	<footer >
+		<div>
+			<p>地址：开福区湘江中路一段308号万达C2栋32楼</p>
+            <p>联系电话：88888888</p>
+		</div>
+	</footer>
+</body>
+</html>
