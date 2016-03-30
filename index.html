@@ -6,6 +6,10 @@
    
    <title></title>
 <style>
+ body{
+ 	margin: 0px;
+ 	padding:0px ;
+ }
 	.row {
 	display:-webkit-box;
 	display:-webkit-flex;
@@ -42,22 +46,27 @@
 }
 .col-30 {
 	-webkit-box-flex:0;
-	-webkit-flex:0 0 30%;
+	-webkit-flex:0 0 29%;
 	-moz-box-flex:0;
-	-moz-flex:0 0 30%;
-	-ms-flex:0 0 30%;
-	flex:0 0 30%;
-	max-width:30%;
+	-moz-flex:0 0 29%;
+	-ms-flex:0 0 29%;
+	flex:0 0 29%;
+	max-width:29%;
 }
 .col-40 {
 	-webkit-box-flex:0;
-	-webkit-flex:0 0 40%;
+	-webkit-flex:0 0 44%;
 	-moz-box-flex:0;
-	-moz-flex:0 0 40%;
-	-ms-flex:0 0 40%;
-	flex:0 0 40%;
-	max-width:40%;
+	-moz-flex:0 0 44%;
+	-ms-flex:0 0 44%;
+	flex:0 0 44%;
+	max-width:44%;
 }
+
+.col-40 a {
+ line-height: 6em;
+}
+
 .nav-entry {
 	padding:5px;
 	font-size:15px
@@ -102,6 +111,7 @@
 	background-color:#ff697a;
 	text-align: center;
 	height: 3em;
+	
 	background-image: none !important;
 }
 .nav-entry .row:nth-child(3) {
@@ -222,6 +232,41 @@ footer div{
 	text-align: center;
 	font-size: 11px;
 }
+.nav-entry .row:nth-child(1) .col:first-of-type a{
+	background-image: url(img/h.png)  !important;
+    background-position:left;
+	background-repeat: no-repeat;
+	background-size: auto 48px;
+	background-position-x: 5px;
+	line-height: 5em;
+	text-align: right;
+	font-size: 1.3em;
+	padding-right: 8px;
+	margin-right: 2px;
+}
+.nav-entry .row:nth-child(2) .col:first-of-type a{
+	background-image: url(img/f1.png)  !important;
+    background-position:left;
+	background-repeat: no-repeat;
+	background-size: auto 80px;
+	background-position-x: 1px;
+	background-position-y: 10px;
+	line-height: 5em;
+	text-align: right;
+	font-size: 1.3em;
+	padding-right: 8px;
+	margin-right: 2px;
+}
+.col-30:first-of-type a{
+	margin-right: 4px;
+	margin-bottom: 2px;
+}
+.col-30:last-of-type {
+	padding-right: 5px;
+}
+.col-30:last-of-type a{
+	
+}
 </style>
 </head>
 <body>
@@ -230,10 +275,9 @@ footer div{
 	</header>
 	<nav id="nav" class="nav-entry">
 		<div class="row">
-			<div class="col col-40">
-				<a id="c_hotel" title="短线出境" onclick="to('/webapp/hotel/');" data-href="/webapp/hotel/">
-				短线出境</a>
-				
+			<div class="col col-40" >
+				<a id="c_hotel" title="出境短线" onclick="to('/webapp/hotel/');" data-href="/webapp/hotel/">
+			    出境短线</a>
 			</div>
 			<div class="col col-30">
 				<a id="c_hotel_international" title="泰国" onclick="to('/webapp/hotel/oversea/?otype=1');" data-href="/webapp/hotel/oversea/?otype=1">泰国</a>
